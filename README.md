@@ -27,17 +27,6 @@ Run a command,
 
 Install AdminLTE theme assets,
 
-run `php artisan ui adminlte`
-
-Install Authentication scaffold,
-
-run `php artisan adminlte:install --auth`
+run `php artisan adminlte:install`
 
 
-Then run,
-
-`npm install && npm run dev`
-
-Or for production,
-
-`npm install && npm run prod`
