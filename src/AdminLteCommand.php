@@ -57,7 +57,7 @@ class AdminLteCommand extends Command
     protected function copyRoutes()
     {
         $source = FileHelper::getPackagePath('stubs/routes');
-		$destination = resource_path('routes');
+		$destination = base_path('routes');
 		
         FileHelper::copyDirectory($source,$destination, true, true);
     }
