@@ -25,23 +25,14 @@ Run a command,
 
 ## Usage
 
-Run command,
+Install AdminLTE theme assets,
 
-To generate both Auth and Theme assets,
+run `php artisan ui adminlte`
 
-`php artisan adminlte:install`
+Install Authentication scaffold,
 
-To install just Auth scaffold,
+run `php artisan adminlte:install --auth`
 
-`php artisan adminlte:install --auth`
-
-To install just Theme assets,
-
-`php artisan adminlte:install --theme`
-
-And then run,
-
-`npm install admin-lte --save`
 
 Then run,
 

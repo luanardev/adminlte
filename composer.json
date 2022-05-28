@@ -1,38 +1,30 @@
 {
     "name": "luanardev/adminlte",
-    "description": "Laravel AdminLTE UI",
-    "keywords": ["Laravel", "AdminLTE", "Laravel Admin"],
-    "authors": [{
-        "name": "Brian Simpo",
-        "email": "bsimpokolwe@luanar.ac.mw"
-    }],
-    "homepage": "https://github.com/luanardev/adminlte",
-    "require": {
+	"homepage": "https://github.com/luanardev/adminlte",
+    "description": "Laravel AdminLTE UI",	
+    "license": "MIT",
+    "authors": [
+		{
+			"name": "Brian Simpo",
+			"email": "bsimpokolwe@luanar.ac.mw"
+		}
+	],
+	"require": {
         "php": "^8.0",
         "laravel/framework": "^8.0",
-        "livewire/livewire": "^2.10"
+        "livewire/livewire": "^2.0",
+		"almasaeed2010/adminlte": "^3.2"
     },
-    "require-dev": {
-        "phpunit/phpunit": "^9.0",
-        "orchestra/testbench": "^6.0",
-        "phpstan/phpstan": "^0.12"
-    },
-    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Luanardev\\AdminLte\\": "src/"
         }
-    },
-    
+    },  
     "extra": {
         "laravel": {
             "providers": [
                 "Luanardev\\AdminLte\\AdminLteServiceProvider"
             ]
         }
-    },
-    "scripts": {
-        "test": "vendor/bin/phpunit -c ./phpunit.xml --colors=always",
-        "analysis": "vendor/bin/phpstan analyse"
     }
 }

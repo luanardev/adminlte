@@ -7,6 +7,7 @@
 				<i class="fas fa-bars"></i>
 			</a>
         </li>
+        
     </ul>
     
 	@hasSection('navbar')
@@ -29,12 +30,7 @@
                 </li>
                 <!-- Menu Footer-->
                 <li class="user-footer">
-                    @hasSection('profile-link')
-		                @yield('profile-link')
-                    @else
-                        <a href="#" class="btn btn-default btn-flat">Profile</a>
-	                @endif
-                    
+                    <a href="#" class="btn btn-default btn-flat">Profile</a>
                     <a href="#" class="btn btn-default btn-flat float-right"
                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         Sign out

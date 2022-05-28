@@ -1,4 +1,4 @@
-@extends('adminlte::layouts.master')
+@extends('layouts.master')
 
 @section('body-class', 'hold-transition login-page')
 
@@ -11,29 +11,24 @@
             <a href="#" class="h1">{{config('app.name')}}</a>
         </div> 
         <div class="card-body">
-            <p class="login-box-msg">You forgot your password? You can retrieve a new password.</p>
-            @if (session('status'))
-                <div class="alert alert-success">
-                    <p>{{ session('status') }}</p>
-                </div>
-            @endif
-            <form action="{{route('password.email')}}" method="post">
+            <p class="login-box-msg">Please confirm your password before continuing</p>
+            <form action="{{route('password.confirm')}}" method="post">
                 @csrf
                 <div class="input-group mb-3">
-                    <input type="email" id="email" name="email" value="{{ old('email') }}" class="form-control @error('email') is-invalid @enderror" placeholder="Email" required >
+                    <input type="password" id="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password" required autocomplete="current-password">
                     <div class="input-group-append">
                         <div class="input-group-text">
-                            <span class="fas fa-envelope"></span>
+                            <span class="fas fa-lock"></span>
                         </div>
                     </div>
-                    @error('email')
+                    @error('password')
                     <span class="error invalid-feedback">{{ $message }}</span>
                     @enderror
                 </div>
                     
                 <div class="row">
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-block">Request new password</button>
+                        <button type="submit" class="btn btn-primary btn-block">Confirm password</button>
                     </div>
                     <!-- /.col -->
                 </div>

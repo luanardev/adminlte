@@ -8,7 +8,7 @@
 	
 	{{-- Flash Message --}}
 	@hasSection('flash')
-		@include('adminlte::partials.flash.flash')
+		@include('partials.flash')
 	@endif
     {{-- Main Content --}}
     <div class="content">
